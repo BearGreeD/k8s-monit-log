@@ -1,0 +1,14 @@
+[SERVICE]
+    Flush        5
+    Daemon       Off
+
+[INPUT]
+    Name         systemd
+    Tag          journal
+
+[OUTPUT]
+    Name         es
+    Match        *
+    Host         127.0.0.1
+    Port         9200
+    Logstash_Format On

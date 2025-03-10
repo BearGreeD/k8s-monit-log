@@ -1,0 +1,15 @@
+---
+# tasks file for base role
+
+- name: Basic config
+  include: base_config.yml
+
+- name: Add base files
+  include: base_files.yml
+
+- name: Install main repo and packages
+  include: install_packages.yml
+
+- name: Unconditionally reboot the machine with all defaults
+  reboot:
+  when: base_reboot_host == 'yes'

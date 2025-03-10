@@ -1,0 +1,11 @@
+---
+# ssh user
+ansible_ssh_private_key_file: /root/.ssh/id_rsa
+
+# -------------------------------
+# ROLE base
+base_timezone: 'Europe/Moscow'
+
+# -------------------------------
+# ROLE firewall
+firewall_iptables_http_https: 'no'

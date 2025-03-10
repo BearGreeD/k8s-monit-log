@@ -1,0 +1,16 @@
+---
+- name: Bash file
+  copy:
+    src: bashrc
+    dest: /root/.bashrc
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Vim file
+  copy:
+    src: vimrc
+    dest: /root/.vimrc
+    owner: root
+    group: root
+    mode: "0644"

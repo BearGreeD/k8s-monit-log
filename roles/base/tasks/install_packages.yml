@@ -1,0 +1,38 @@
+---
+- name: "Update apt cache"
+  apt:
+    update_cache: true
+
+- name: Upgrade the OS (apt-get dist-upgrade)
+  when: base_update_all_packages == 'yes'
+  apt:
+    upgrade: dist
+
+- name: Install main packages
+  apt:
+   name:
+     - bash-com*
+     - logwatch
+     - lsof
+     - mc
+     - mlocate
+     - ncdu
+     - net-tools
+     - openssh-client
+     - openssh-server
+     - openssl
+     - telnet
+     - tmux
+     - vim
+     - vim-common
+     - wget
+     - rsync
+     - iptraf-ng
+     - man-db
+     - curl
+     - git
+     - rsyslog
+     - htop
+     - python3-cryptography
+     - apt-transport-https
+   state: latest

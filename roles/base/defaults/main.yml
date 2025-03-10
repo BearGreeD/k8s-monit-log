@@ -1,0 +1,6 @@
+---
+base_reboot_host: false
+base_selinux_config: 'permissive'
+base_update_all_packages: false
+base_timezone:
+extra_packages: []

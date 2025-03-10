@@ -1,0 +1,16 @@
+---
+#
+# Usage: ansible-playbook prometheus_install.yml -i hosts --extra-vars "target=prometheus_local"
+
+- name: 
+  hosts: '{{ target }}'
+  remote_user: user
+  become: yes
+
+  roles:
+    - role: base
+    - role: prometheus
+    - role: node_exporter
+    - role: elastic_kibana
+    - role: fluentbit
+    - role: firewall

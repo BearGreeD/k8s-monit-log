@@ -1,0 +1,7 @@
+---
+# tasks file for firewall
+- include: install_iptables.yml
+
+- include: disable_firewalld.yml
+
+- include: iptables_rules.yaml

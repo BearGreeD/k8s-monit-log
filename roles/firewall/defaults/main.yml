@@ -1,0 +1,6 @@
+---
+# defaults file for firewall
+firewall_allowed_tcp_ports:
+  - "22"
+
+firewall_allowed_src_and_tcp_ports: {}

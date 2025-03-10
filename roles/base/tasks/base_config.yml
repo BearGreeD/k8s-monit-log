@@ -1,0 +1,16 @@
+---
+- name: Set search history 1
+  lineinfile:
+    path: /etc/inputrc
+    regexp: '^#.*history-search-backward$'
+    line: '"\e[5~": history-search-backward'
+
+- name: Set search history 2
+  lineinfile:
+    path: /etc/inputrc
+    regexp: '^#.*history-search-forward$'
+    line: '"\e[6~": history-search-forward'
+
+- name: set timezone to base_timezone
+  timezone:
+    name: '{{ base_timezone }}'

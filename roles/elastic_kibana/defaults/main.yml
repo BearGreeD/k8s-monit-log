@@ -1,0 +1,5 @@
+---
+elasticsearch_logs_dir: "/usr/share/elasticsearch/logs"
+elasticsearch_data_dir: "/usr/share/elasticsearch/data"
+elasticsearch_user: "elasticsearch"
+elasticsearch_group: "elasticsearch"

@@ -1,0 +1,13 @@
+---
+# tasks file for firewall
+
+- name: Save default iptables rules in file Debian
+  when: ansible_distribution == 'Debian'
+  template:
+    src: iptables.j2
+    dest: /etc/iptables/rules.v4
+    owner: root
+    group: root
+    mode: '0600'
+  notify:
+    - Restart iptables service Debian

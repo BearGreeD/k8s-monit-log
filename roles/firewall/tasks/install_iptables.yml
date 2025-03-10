@@ -1,0 +1,8 @@
+---
+- name: Install iptables-service Debian
+  apt:
+    name:
+      - iptables
+      - iptables-persistent
+    state: latest
+  when: ansible_distribution == 'Debian'
